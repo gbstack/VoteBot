@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "人大议案刷票器",
+  "description": "人大议案刷票器",
+  "version": "1.0",
+
+  "permissions": [
+    "http://forum.china.com.cn/",
+    "http://*/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://forum.china.com.cn/*", "*://www.baidu.com/*"],
+      "js": ["vote.js"]
+    }
+  ]
+}
